@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "1fa191df-17e7-496f-b125-b527ff1a11c9",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "point",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 512,
+  "height": 512,
+  "platformSettings": {},
+  "subMetas": {
+    "penguin_atack_02": {
+      "ver": "1.0.6",
+      "uuid": "796792ca-3998-4ee9-a149-0ee4b17a921f",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "1fa191df-17e7-496f-b125-b527ff1a11c9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 34,
+      "offsetY": -103,
+      "trimX": 148,
+      "trimY": 240,
+      "width": 284,
+      "height": 238,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
