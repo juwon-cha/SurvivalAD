@@ -6,7 +6,7 @@
 
 ## 🎮 게임 플레이 미리보기
 
-
+<div align="center"><img src="https://github.com/user-attachments/assets/d808f1fb-146f-42c1-9a1b-c957cf8294de" width="400" height="600"></div>
 
 ## ✨ 프로젝트 핵심 강점
 
@@ -18,7 +18,7 @@
    - "이동 → 몬스터 자동 사냥 → 아이템 자동 수집 → 아이템 판매 및 업그레이드"로 이어지는 직관적이고 중독성 있는 성장형 게임 루프를 구현했습니다.
    - 이는 짧은 광고 시간 동안 유저의 몰입을 유도하고 더 플레이하고 싶다는 감정을 자극하여 높은 전환율을 기대할 수 있습니다.
 
-3. **성능 최적화를 위한 OBJECT POOLING 적용**
+3. **성능 최적화를 위한 오브젝트 풀링 적용**
    - `MonsterManager`와 `ItemManager` 내에 `cc.NodePool`을 활용하여 게임의 핵심 오브젝트인 몬스터와 아이템, 체력 바 등을 관리합니다.
    - 반복적으로 생성되고 사라지는 오브젝트를 재활용함으로써, 가비지 컬렉션(GC) 부담을 줄이고 프레임 드랍을 방지하여 저사양 디바이스에서도 부드러운 플레이 경험을 제공합니다.
 
@@ -34,17 +34,17 @@
 
 ## ⚙️ 주요 기능 및 코드 설명
 
-### GAMEMANAGER.TS
+### GameManager.ts
 - 게임의 전반적인 흐름과 상태를 관리하는 **중앙 관리자** 입니다.
 - 게임 시작 시 플레이어를 생성하고 `PlayerController`, `MonsterManager`, `CameraFollow` 등 각 컴포넌트에 필요한 의존성(ex: 플레이어 인스턴스)을 주입합니다.
 
-### PLAYERCONTROLLER.TS
+### PlayerController.ts
 - **플레이어의 모든 핵심 로직**을 담당합니다.
 - `update(dt)`: 조이스틱 입력을 받아 캐릭터를 이동시키고 맵 경계를 벗어나지 않도록 위치를 보정합니다.
 - `findAndAttackMonster()`: 공격 범위 내 가장 가까운 몬스터를 찾아 `attack()`을 호출하는 자동 공격 로직을 처리합니다.
 - `checkItemCollection()`: 수집 범위 내 아이템을 자동으로 줍고 캐릭터 등에 아이템 스택을 쌓는 `collectItem()`을 호출합니다.
 
-### MONSTERMANAGER.TS & ITEMMANAGER.TS
+### MonsterManager.ts & ItemManager.ts
 - `cc.NodePool`을 사용한 **오브젝트 풀링의 핵심**입니다.
 - `spawnMonster()`, `spawnItem()`: 풀에서 오브젝트를 가져와 월드에 배치합니다. 풀이 비어있을 경우에만 새로운 인스턴스를 생성합니다.
 - `despawnMonster()`, `despawnItem()`: 사용이 끝난 오브젝트를 비활성화하고 다시 풀에 반환하여 재사용을 준비시킵니다.
